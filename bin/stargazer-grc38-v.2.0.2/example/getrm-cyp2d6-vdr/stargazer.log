@@ -1,0 +1,56 @@
+[INFO] ----------------------------------------------------------------------
+[INFO] Stargazer 2.0.0
+[INFO] Author: Seung-been "Steven" Lee
+[INFO] Enter 'python3 Stargazer -h' to view command line arguments
+[INFO] For more details, please visit https://stargazer.gs.washington.edu/stargazerweb
+[INFO] Date: 2023-04-04
+[INFO] Start time: 12:38:54
+[INFO] Stargazer path: /net/nwgc/vol1/nobackup/Stargazer/Stargazer-20-grch38-support/stargazer/
+[INFO] Command line: stargazer -o getrm-cyp2d6-vdr -d wgs -t cyp2d6 -c vdr -i getrm-cyp2d6-vdr.joint.filtered.vcf -g getrm-cyp2d6-vdr.gdf -a hg19
+[INFO] ----------------------------------------------------------------------
+[INFO] ----------------------------------------------------------------------
+[INFO] Step 1/9: Determining genotype mode...
+[INFO] Reference genome assembly: hg19
+[INFO] Target gene: CYP2D6
+[INFO] Target paralog: CYP2D7
+[INFO] Target region: chr22:42512500-42551883
+[INFO] Control gene: VDR
+[INFO] Control region: chr12:48232319-48301814
+[INFO] Input data source: Whole genome sequencing
+[INFO] VCF-only mode is turned on: False
+[INFO] Impute ungenotyped markers: False
+[INFO] Finished determining genotype mode
+[INFO] ----------------------------------------------------------------------
+[INFO] ----------------------------------------------------------------------
+[INFO] Step 2/10: Assessing input VCF file...
+[INFO] Samples total: 70
+[INFO] Markers total: 555
+[INFO] Markers with allelic depth: 555
+[INFO] Markers unphased: 555
+[INFO] Markers phased: 0
+[INFO] Markers partially phased: 0
+[INFO] Finished assessing input VCF file
+[INFO] ----------------------------------------------------------------------
+[INFO] ----------------------------------------------------------------------
+[INFO] Step 3/10: Processing input VCF...
+[INFO] Markers with allelic imbalance: 44
+[INFO] Markers with high missingness: 1
+[INFO] Markers with invalid allele: 0
+[INFO] Finished processing input VCF
+[INFO] ----------------------------------------------------------------------
+[INFO] ----------------------------------------------------------------------
+[INFO] Step 4/10: Conforming input VCF...
+[INFO] Markers total: 555
+[INFO] Markers filtered: 1
+[INFO] Markers remaining: 554
+[INFO] Markers phasable: 407
+[INFO] Markers ready: 401
+[INFO] Markers conformed: 6
+[INFO] Markers unphasable: 29
+[INFO] Markers absent in reference VCF: 21
+[INFO] Markers with different REF allele: 4
+[INFO] Markers with no overlapping ALT alleles: 4
+[INFO] Finished conforming input VCF
+[INFO] ----------------------------------------------------------------------
+[INFO] ----------------------------------------------------------------------
+[INFO] Step 5/10: Statistically phasing input VCF...

@@ -48,16 +48,27 @@ process runPharmcat {
 }
 
 
-// process runStargzer {
-//     publishDir "${params.output_dir}/pharmcat", mode: 'copy'
-//     input:
-//     path vcf_file
+process runStargzer {
+    container 'stargazer:v2.0.2'
+    publishDir "${params.output_dir}/stargazer", mode: 'copy'
+    memory '20 GB'
+    input:
+    path vcf_file
 
-// }
+    output:
+    path "${vcf_file.baseName}"
+
+    """
+    mkdir -p /app/data/
+    cp -r $vcf_file /app/data/
+    /app/run_stargazer.sh /app/data/${vcf_file}
+    """
+}
 
 
 workflow {
     ch = Channel.fromPath(params.input_dir)
     add_chr = addChr(ch)
     runPharmcat(add_chr)
+    runStargzer(ch)
 }
